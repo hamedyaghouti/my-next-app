@@ -40,8 +40,6 @@
 //  * @see https://next-auth.js.org/configuration/options
 //  */
 
-// export const runtime = "edge";
-
 // export const authOptions: NextAuthOptions = {
 //   callbacks: {
 //     session: ({ session, user }) => ({
@@ -118,6 +116,7 @@ import GithubProvider from "next-auth/providers/github";
 
 import prisma from "@/app/libs/prismadb";
 
+export const runtime = "experimental-edge";
 export const authOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
